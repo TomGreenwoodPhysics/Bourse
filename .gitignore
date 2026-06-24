@@ -1,0 +1,18 @@
+# C++ build
+build/
+*.o
+*.so
+*.a
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+.ipynb_checkpoints/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
