@@ -13,7 +13,7 @@ add_library(bourse_core src/order_book.cpp)
 target_include_directories(bourse_core PUBLIC include)
 
 # --- correctness suite ---
-add_executable(bourse_tests tests/test_main.cpp tests/test_order_book.cpp)
+add_executable(bourse_tests tests/test_main.cpp tests/test_order_book.cpp tests/test_replay.cpp)
 target_link_libraries(bourse_tests PRIVATE bourse_core)
 target_include_directories(bourse_tests PRIVATE tests)
 enable_testing()

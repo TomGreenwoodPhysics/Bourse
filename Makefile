@@ -4,7 +4,7 @@ CXXFLAGS := -std=c++20 -O2 -Wall -Wextra -Wpedantic -Iinclude -Itests
 BUILD    := build
 
 ENGINE_SRC := src/order_book.cpp
-TEST_SRC   := tests/test_main.cpp tests/test_order_book.cpp
+TEST_SRC   := tests/test_main.cpp tests/test_order_book.cpp tests/test_replay.cpp
 BENCH_SRC  := tests/bench.cpp
 
 .PHONY: all test bench clean

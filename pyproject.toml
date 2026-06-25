@@ -1,21 +1,19 @@
 [build-system]
-requires = ["scikit-build-core>=0.8", "pybind11>=2.12"]
-build-backend = "scikit_build_core.build"
+requires = ["setuptools>=64", "pybind11>=2.12"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "bourse"
 version = "0.1.0"
 description = "Event-driven limit order book exchange simulator with a research layer."
 requires-python = ">=3.10"
-dependencies = [
-    "numpy",
-    "pandas",
-    "matplotlib",
-]
+dependencies = ["numpy", "pandas", "matplotlib"]
 
 [project.optional-dependencies]
 research = ["jupyter", "scipy", "scikit-learn"]
 
-# Enabled in Phase 2 once the pybind11 module is wired into CMake.
-# [tool.scikit-build]
-# wheel.packages = ["python/bourse"]
+[tool.setuptools]
+package-dir = {"" = "python"}
+
+[tool.setuptools.packages.find]
+where = ["python"]
